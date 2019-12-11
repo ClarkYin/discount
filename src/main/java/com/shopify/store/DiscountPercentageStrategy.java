@@ -9,6 +9,6 @@ import java.math.RoundingMode;
 public class DiscountPercentageStrategy implements DiscountStrategy{
     @Override
     public BigDecimal applyDiscount(long price, int quantity, double percentage) {
-        return new BigDecimal((price * quantity * (1-percentage))).setScale(1, RoundingMode.HALF_UP).stripTrailingZeros();
+        return new BigDecimal(price * quantity * (1-percentage)).setScale(1, RoundingMode.HALF_UP).stripTrailingZeros();
     }
 }
